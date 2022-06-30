@@ -17,6 +17,6 @@
 
 ```
 # test-deploy-token
-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
+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
 ```
 
