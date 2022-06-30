@@ -1,15 +1,19 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
 // 如果编辑器提示 path 模块找不到，则可以安装一下 @types/node -> npm i @types/node -D
 import { resolve } from 'path'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-import { VantResolver } from 'unplugin-vue-components/resolvers'
+import { ElementPlusResolver, VantResolver } from 'unplugin-vue-components/resolvers'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    Vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()]
+    }),
     Components({
-      resolvers: [VantResolver()]
+      resolvers: [ElementPlusResolver(), VantResolver()]
     })
   ],
   resolve: {
