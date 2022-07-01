@@ -13,10 +13,3 @@
 * 代码规范：[EditorConfig](http://editorconfig.org) + [Prettier](https://prettier.io/) + [ESLint](https://eslint.org/) + [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript#translation)
 * 自动部署：[GitHub Actions](https://docs.github.com/cn/actions/learn-github-actions)
 
-## Github Action Token
-
-```
-# test-deploy-token
-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
-```
-
